@@ -29,6 +29,7 @@
       background-image: url(people.jpeg);
       background-size: cover;
       border-radius: 10px;
+     background-position: center;
 }
 
 .span-align-text-cont{
