@@ -123,45 +123,44 @@ const FilterSection = (prop)=> {
 
      );
 
-     const displayEmpType = ()=> {
+  const displayEmpType = () => {
 
-      const onSetEmpType = (e)=>{
+  const onSetEmpType = (e) => {
+    if (e.target.checked) {
+      setMyValues({
+        ...myValues,
+        empType: [...myValues.empType, e.target.value]
+      });
+    } else {
+      setMyValues({
+        ...myValues,
+        empType: myValues.empType.filter(each => each !== e.target.value)
+      });
+    }
+  };
 
-    
-        if(e.target.checked){
+  return (
+    <ul className='p-3 filters'>
+      <h6 className='text text-warning'>Employment Type :</h6>
 
+      {empArr.map(each => (
+        <li key={each.id}>
+          <input
+            id={each.id}
+            type="checkbox"
+            value={each.id}
+            onChange={onSetEmpType}
+            checked={myValues.empType.includes(each.id)}   // ✅ important fix
+          />
+          <label htmlFor={each.id} className='ml-3 text text-white'>
+            {each.label}
+          </label>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-              setMyValues({...myValues,empType:[...myValues.empType,e.target.value]}) 
-
-        }
-
-        else{
-
-              setMyValues({...myValues,empType: myValues.empType.filter(each => each !== e.target.value)}) 
-
-        }
-        
-
-      }
-
-      return(
-        <ul className='p-3 filters'>
-
-          <h6 className='text text-warning'>Employment Type :</h6>
-
-            {
-              empArr.map(each =>(
-                <li key={each.id}>
-                  <input id= {each.id} onChange={onSetEmpType} value={each.id} type="checkBox" />
-                  <label htmlFor= {each.id} className='ml-3 text text-white'>{each.label}</label>
-                </li>
-              ))
-            }
-
-        </ul>
-      )
-
-     };
 
      const displaySalary=()=>{
 
