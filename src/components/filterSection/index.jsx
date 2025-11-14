@@ -123,7 +123,7 @@ const FilterSection = (prop)=> {
 
      );
 
-  const displayEmpType = () => {
+   const displayEmpType = () => {
 
   const onSetEmpType = (e) => {
     if (e.target.checked) {
@@ -150,7 +150,7 @@ const FilterSection = (prop)=> {
             type="checkbox"
             value={each.id}
             onChange={onSetEmpType}
-            checked={myValues.empType.includes(each.id)}   // ✅ important fix
+            checked={myValues.empType.includes(each.id)}   
           />
           <label htmlFor={each.id} className='ml-3 text text-white'>
             {each.label}
@@ -162,52 +162,35 @@ const FilterSection = (prop)=> {
 };
 
 
-     const displaySalary=()=>{
+   const displaySalary = () => {
+const onSalaryRange = (e) => {
+  setMyValues({ ...myValues, salary: Number(e.target.value) });
+};
 
 
-      const onSalaryryRange =(e)=>{
+  return (
+    <ul className="p-3 filters">
+      <h6 className="text text-warning">Salary Range :</h6>
 
-      console.log(e.target.value);
+      {salaryArr.map((each) => (
+        <li key={each.id}>
+          <input
+            name="salary"
+            id={each.id}
+            onChange={onSalaryRange}
+            value={each.id}
+            type="radio"
+            checked={myValues.salary === each.id}   // ← Important!
+          />
+          <label htmlFor={each.id} className="ml-3 text text-white">
+            {each.label}
+          </label>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-      if(e.target.checked === true){
-
-        setMyValues({...myValues, salary: e.target.value});
-
-      }
-
-    else{
-
-      setMyValues({...myValues,salary: myValues.salary.filter(each => each !== e.target.value)}) 
-
-
-    }
-      
-
-
-
-      }
-
-
-      return (
-
-             <ul className='p-3 filters'>
-
-          <h6 className='text text-warning'>Salary Range :</h6>
-
-            {
-              salaryArr.map(each =>(
-                <li key={each.id}>
-                  <input name='salary' id= {each.id} onChange={onSalaryryRange} value={each.id} type="radio" />
-                  <label htmlFor= {each.id} className='ml-3 text text-white'>{each.label}</label>
-                </li>
-              ))
-            }
-
-        </ul>
-
-      )
-
-           }
 
 return(
 
