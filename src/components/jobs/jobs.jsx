@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import FilterSection from "../filterSection";
 import DisplayAllJObs from "../displayAllJobs";
 import Loader from "../Loader";
+import Footer from "../footer";
 
 
 
@@ -126,17 +127,24 @@ const   Jobs = () => {
                        }
 
                     </ul>
-                    
+
                 </div>
+
 
             </div>
 
         </div>
+
+         <Footer/>
+               
        
        </div>
        
+      
         
     )
+
+    
 
 }
 

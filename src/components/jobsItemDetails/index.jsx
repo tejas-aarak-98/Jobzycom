@@ -3,6 +3,7 @@ import './index.css';
 import Header from '../header';
 import Cookies from 'js-cookie';
 import { useEffect,useState } from 'react';
+import Footer from "../footer";
 
 
 const jobsItemDetails =  (props) => {
@@ -148,8 +149,15 @@ const jobsItemDetails =  (props) => {
             <img src={life_at_company.image_url} alt="life at company" className="life-img" />
           </div>
         </div>
+
+        
       </div>
+
+         <Footer/>
+
     </div>
+
+    
   );
 }
 

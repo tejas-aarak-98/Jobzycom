@@ -2,6 +2,7 @@ import "./home.css";
 import { useEffect } from "react";
 import Header from "../header";
 import { Link } from "react-router-dom";
+import Footer from "../footer";
 
 const   Home = () => {
 
@@ -46,7 +47,8 @@ const   Home = () => {
 
                       <span className="right-img-cont">
 
-                  
+                      
+
                 
                       </span>
 
@@ -61,6 +63,9 @@ const   Home = () => {
                      <Link to={"/jobs"} className="btn btn-warning">Find Jobs</Link>
                      
                </div>
+
+              <Footer/>
+
         </>
         
         
