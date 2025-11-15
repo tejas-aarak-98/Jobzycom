@@ -42,7 +42,7 @@ const Footer = ()=>{
         <h2 className="heading">Social Media</h2>
         <div className="social-icons">
           <i className="fa-brands fa-facebook"></i>
-          <a href="https://www.instagram.com/tejas_aarak_18/profilecard/?igsh=N3dpdzBvcW1pd3Bj"><i class="fa-brands fa-instagram"  style={{color : "white"}}></i></a>
+          <a href="https://www.instagram.com/tejas_aarak_18/profilecard/?igsh=N3dpdzBvcW1pd3Bj"><i className="fa-brands fa-instagram"  style={{color : "white"}}></i></a>
           <i className="fa-brands fa-twitter"></i>
           <i className="fa-brands fa-linkedin"></i>
         </div>

@@ -24,3 +24,14 @@
 .topspace-cont{
     z-index:2;
 }
+
+.col-md-9{
+  
+    height: 100vh;
+    overflow: auto;
+}
+
+.col-md-3{
+    height: 100vh;
+    overflow: auto;
+}

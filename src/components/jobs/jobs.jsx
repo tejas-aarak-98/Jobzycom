@@ -114,7 +114,7 @@ const   Jobs = () => {
 
             <div className="row h-100 topspace-cont">
 
-                <div className="col-12 col-md-3 overflow-auto">
+                <div className="col-12 col-md-3">
 
                         <FilterSection setMyValues = {setValues} myValues = {allValues}/>
 
